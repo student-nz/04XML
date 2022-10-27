@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<people>
+    <person personid="10001">
+        <name>yjxz1</name>
+        <address>湖南永州</address>
+        <tel>15377464701</tel>
+        <fax>yjxz1的信件</fax>
+        <email>3440293452@qq.com</email>
+    </person>
+    <person personid="10002">
+        <name>yjxz2</name>
+        <address>湖南永州</address>
+        <tel>15377464702</tel>
+        <fax>yjxz2的信件</fax>
+        <email>3440293453@qq.com</email>
+    </person>
+</people>

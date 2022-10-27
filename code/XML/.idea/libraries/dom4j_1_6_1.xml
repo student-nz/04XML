@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="dom4j-1.6.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gson-1.7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hamcrest-core-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxen-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jdom-2.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsoup-1.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/JsoupXpath-0.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/junit-4.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xpp3_min-1.1.4c.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xstream-1.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

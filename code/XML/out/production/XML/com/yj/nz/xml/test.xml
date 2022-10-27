@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="16.0.2" class="java.beans.XMLDecoder">
+ <object class="com.yj.nz.xml.Person">
+  <void property="address">
+   <string>湖南永州</string>
+  </void>
+  <void property="email">
+   <string>3440293452@qq.com</string>
+  </void>
+  <void property="fax">
+   <string>yjxz1的信件</string>
+  </void>
+  <void property="name">
+   <string>yjxz03</string>
+  </void>
+  <void property="personid">
+   <string>10003</string>
+  </void>
+  <void property="tel">
+   <string>15377464701</string>
+  </void>
+ </object>
+</java>
