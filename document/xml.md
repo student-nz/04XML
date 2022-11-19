@@ -84,7 +84,7 @@
 
 ​				语法：<!-- 这是一条注释-->
 
-### 		5. 指令(了解)：结合css的
+### 		5. 指令：结合css的
 
 ​				<?xml-stylesheet type="text/css" href="a.css" ?>
 
@@ -302,7 +302,7 @@ DTD的使用步骤
 
 ​				dom4j是一个优秀的Java XML API，具有性能优异、功能强大和极端易用使用的特点
 
-​				dom4j也是一个开放源代码的软件，可以在SourceForge上找到它
+​				dom4j也是一个开放源代码的软件，可以在SourceForge上找到它，
 
 ​				下载地址：https://dom4j.github.io/
 
@@ -408,6 +408,10 @@ Jsoup是一款Java的HTML解析器，可直接解析某个URL地址、HTML文本
 | //元素[@属性名]        | 查找元素对象，全文搜索指定元素名和属性名。                 |
 | //元素//[@属性名=‘值’] | 查找元素对象，全文搜索指定元素名和属性名，并且属性值相等。 |
 
+## 6. XML解析技术的作用
+
+​	用Java代码读取xml中的数据
+
 # 二、JSON
 
 ## 1. 什么是JSON
@@ -460,6 +464,56 @@ Jsoup是一款Java的HTML解析器，可直接解析某个URL地址、HTML文本
 
 ​			3. XML通常用做配置文件
 
-# 四、其余参考官方文档学习
+# 四、配置文件
 
-​	其余未涉及到，现学项目现补充
+## 1. 配置文件的作用
+
+​		配置文件是用于给应用程序提供配置参数以及初始化设置的一些有特殊格式的文件
+
+## 2. 常见的配置文件类型
+
+### 2.1 properties文件
+
+> 例如：
+
+​		druid连接池就是使用properties文件作为配置文件
+
+> 文件示例：
+
+```
+username=root
+password=root
+url=jdbc:mysql://localhost:3306/test03?useSSL=false&requireSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+driverClassName=com.mysql.cj.jdbc.Driver
+```
+
+> 语法规范：
+>
+> ​	1. 由键值对组成
+>
+> ​	2. 键和值之间的符号是等号
+>
+> ​	3. 每一行都必须顶格写，前面不能有空格之类的其他符号
+
+### 2.2 XML文件
+
+> 例如：
+
+​		Tomcat就是使用XML文件作为配置文件
+
+> 语法规范：这章节已总结
+
+### 2.3 YAML文件
+
+> 例如：
+
+​		SpringBoot就是使用YAML作为配置文件
+
+> 语法规范：SpringBoot章节会总结
+
+### 2.4 json文件
+
+​		通常用来做文件传输，也可以用来做前端或者移动端的配置文件
+
+> 语法规范：这章节已经总结
+
