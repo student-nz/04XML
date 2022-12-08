@@ -112,88 +112,75 @@
 
 ### 	4. DTD约束
 
-```
-DTD约束三种定义：（未涉及的，现学现用即可）
-	1. 元素定义
-	2. 属性定义
-	3. 实体定义 
-
-DTD：
-	dtd引入到xml文档中三种方案
-		1. 引入本地dtd
-			<!DOCTYPE 根元素名称 SYSTEM ‘DTD文件的路径'>
-		2. 在xml文件内部引入
-			<!DOCTYPE 根元素名称 [ dtd文件内容 ]>
-		3. 引入网络dtd
-			<!DOCTYPE 根元素的名称 PUBLIC "DTD文件名称" "DTD文档的URL"
-案例：
-student.dtd
-	<!ELEMENT students (student*) >
-	<!ELEMENT student (name,age,sex)>
-	<!ELEMENT name (#PCDATA)>
-	<!ELEMENT age (#PCDATA)>
-	<!ELEMENT sex (#PCDATA)>
-	<!ATTLIST student number ID #REQUIRED>
-	
-DTD的使用步骤
-	1. 编写DTD约束文档，后缀必须是.dtd
-	2. 在需要编写的XML文件中导入该DTD约束文档
-	3. 按照约束的规定编写XML文件的内容
-
-```
-
-#### 	DTD语法规则：
-
-![image-20221027230256652](assets\image-20221027230256652.png)
+> DTD约束三种定义：（现学现用）
+> 	1. 元素定义
+> 	2. 属性定义
+> 	3. 实体定义 
+>
+> ```
+> DTD：
+> 	dtd引入到xml文档中三种方案
+> 		1. 引入本地dtd	
+> 			<!DOCTYPE 根元素名称 SYSTEM ‘DTD文件的路径'>
+> 		2. 在xml文件内部引入
+> 			<!DOCTYPE 根元素名称 [ dtd文件内容 ]>
+> 		3. 引入网络dtd
+> 			<!DOCTYPE 根元素的名称 PUBLIC "DTD文件名称" "DTD文档的URL"
+> 案例：
+> student.dtd
+> <!ELEMENT students (student*) >
+> <!ELEMENT student (name,age,sex)>
+> <!ELEMENT name (#PCDATA)>
+> <!ELEMENT age (#PCDATA)>
+> <!ELEMENT sex (#PCDATA)>
+> <!ATTLIST student number ID #REQUIRED>
+> ```
+>
+> DTD的使用步骤
+> 	1. 编写DTD约束文档，后缀必须是.dtd
+> 	2. 在需要编写的XML文件中导入该DTD约束文档
+> 	3. 按照约束的规定编写XML文件的内容
 
 ### 5. Schema约束
 
-```
-1. schema约束规范
-	
-	1. 所有标签和属性都要schema文件来定义
-
-	2. 所有schema文件都需要一个id，但是在这个它叫namespace
-
-	3. namespace的值由什么来指定？
-		由targetNamespace属性来指定，它的值是一个url（很有可能不存在）
-	
-	4. 如何引入一个Schema约束？
-		
-		属性：用xmlns属性
-		属性值：对应的schema文件的id（namespace的值）
-
-	5. 如果引入的schema不是w3c组织定义，必须指定schema文件的位置
-
-	6. schema文件的位置由什么属性来指定？
-		
-		属性：schemaLocation
-		属性值：.xsd文件中targetNamespace标签中的url
-
-	7. 如果引入了N个约束，需要给n-1个取别名
-```
-
-#### Shema使用步骤：
-
-​	![image-20221027230811347](assets\image-20221027230811347.png)
+> schema约束规范
+>
+> 1. 所有标签和属性都要schema文件来定义
+>
+> 2. 所有schema文件都需要一个id，但是在这个它叫namespace
+>
+> 3. namespace的值由什么来指定？
+> 	由targetNamespace属性来指定，它的值是一个url（很有可能不存在）
+>
+> 4. 如何引入一个Schema约束？
+> 	
+> 	属性：用xmlns属性
+> 	属性值：对应的schema文件的id（namespace的值）
+>
+> 5. 如果引入的schema不是w3c组织定义，必须指定schema文件的位置
+>
+> 6. schema文件的位置由什么属性来指定？
+> 	
+> 	属性：schemaLocation
+> 	属性值：.xsd文件中targetNamespace标签中的url
+>
+> 7. 如果引入了N个约束，需要给n-1个取别名
 
 ### 6. schema和dtd的区别
 
-```
-1. Schema和DTD主要的作用是来约束xml，定义xml标记的使用规范
-
-2. Schema本身也是XML文档，DTD使用的是自己特殊的语法，因此只要知道XML的语法规则就可以编写Schema了不需要再学习其他的语法
-
-3. 利用命名空间将文件中特殊的节点与Schema说明相联系，一个xml可以有多个schema，但只能有一个dtd
-
-4.Schema的内容模型是开放的，可以随意扩充，而DTD不能扩充
-
-5.DTD只能把文件定义为一个字符串，而XML Scheam允许把文件类型定义为整数，浮点，字符串，布尔等等
-
-6.Schema支持include和import两种引用命名空间的方法
-
-因此schema约束比dtd约束应用更广泛
-```
+> 1. Schema和DTD主要的作用是来约束xml，定义xml标记的使用规范
+>
+> 2. Schema本身也是XML文档，DTD使用的是自己特殊的语法，因此只要知道XML的语法规则就可以编写Schema了不需要再学习其他的语法
+>
+> 3. 利用命名空间将文件中特殊的节点与Schema说明相联系，一个xml可以有多个schema，但只能有一个dtd
+>
+> 4. Schema的内容模型是开放的，可以随意扩充，而DTD不能扩充
+>
+> 5. DTD只能把文件定义为一个字符串，而XML Scheam允许把文件类型定义为整数，浮点，字符串，布尔等等
+>
+> 6. Schema支持include和import两种引用命名空间的方法
+>
+>    因此schema约束比dtd约束应用更广泛
 
 ## 4. xml解析技术相关
 
